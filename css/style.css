@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+  background-color: #e8ffff;
+}
+
+.title{
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 4px;
+}
+
 #bg{
     position: fixed;
     top: -50%;
@@ -16,3 +27,148 @@
     min-width: 50%;
     min-height: 50%;
 }
+
+.col-half-offset{
+  margin-left:2.166666667%
+}
+
+.container-image{
+    border: 1px solid #41aea9;
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container-image img{
+  width: 110px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+.container-image p{
+    margin-top: -30px;
+    visibility: hidden;
+    font-size: 40px;
+    font-weight: bold;
+    color: #931a25;
+}
+
+.container-image:hover {
+    border: none;
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+.container-image:hover p{
+  visibility: unset;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+  
+  .container-image:hover::before, .container-image:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  .container-image:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+
+
+  .japan-unsplash:hover{
+    transform: scale(1.1);
+  }
